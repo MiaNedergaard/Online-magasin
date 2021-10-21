@@ -1,4 +1,4 @@
-# online-magasin
+# online-magasin Mia Nedergaard, 1 sem, efterår 2021
 
 Dette er min kode til mit online magasin.
 
