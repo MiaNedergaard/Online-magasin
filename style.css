@@ -1,0 +1,674 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/* RESET AF CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* SMOOTH SCROOL */ 
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* FARVER VARIABLER */
+:root{
+    --white: #fff;
+    --black: #000;
+    --orange: #f96339;
+    --lysorange: #ed7956;
+    --blae: #33ccff;
+    --lysblae: #87ceff;
+    --moerkblae:#282d80;
+}
+
+/* NAVIGATION */
+
+.banner{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--blae);
+    background-size: cover;
+    background-position: center;
+} 
+
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 2px;
+    background-color: #fff;
+    transition: all 300ms ease-in-out;
+}
+
+.logo{
+    width: 160px;
+    margin-left: 2%;
+    cursor: pointer;
+}
+
+.menuicon{
+    cursor: pointer;
+    display: none;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 40px;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: var(--blae);
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0 ;
+    background:var(--lysblae);
+    position: absolute;
+    left: 0px;
+    bottom: 30px;
+    transition: 0.5s;
+} 
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+
+
+/*LANDINGPAGE*/
+
+.banner .landingpage{
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    margin-left: 55%;
+    transform: translateY(50%);
+    color: #fff; 
+}
+
+.landingpage .header h1{
+    display: flex;
+    padding: 45px 0;
+    flex-direction: column;
+    font-size: 3em;
+    animation: landingpage 1s ease-in;
+}
+
+.landingpage .citat1{
+    display: flex;
+    padding-bottom: 10px;
+    animation: landingpage-2 1.5s ease-in;
+}
+
+.landingpage .karla{
+    padding-bottom: 40px;
+    animation: landingpage-2 1.5s ease-in;
+}
+
+.landingpage .citat2{
+    display: flex;
+    padding-bottom: 20px;
+    animation: landingpage-2 1.5s ease-in;
+}
+
+.landingpage .mads{
+    padding: 5px 0;
+    animation: landingpage-2 1.5s ease-in;
+}
+
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    animation: landingknap 2s ease-in
+}
+
+
+span{
+    background: var(--orange);
+    height: 100%;
+    width: 0%;
+    border-radius: 25%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none ;
+}
+
+#topersoner{
+height: auto;
+width: 100%;
+}
+
+
+
+/* OM UNGBALANCE */
+
+.omos{
+    display: flex;
+    width: auto;
+    height: 130vh;
+    background-color: var(--white);
+    background-size: cover;
+    background-position: center;
+}
+
+.omos .logobar{
+    width: 270px;
+    margin-left: 40.5%;
+    padding: 25px 0;
+    cursor: pointer;
+    align-content: center;
+}
+
+.omos .wrapper{
+    position: absolute;
+    width: 100%;
+    height: 110vh;
+    position: absolute;
+    text-align: center;
+    color: #000; 
+    background-color:var(--white);
+}
+
+
+.tekst1{
+    align-content: center;
+    padding: 5px 0;
+    font-size: 1em;
+    line-height: 2vw;
+}
+
+.tekst2{
+    align-content: center;
+    padding: 5px 0;
+    line-height: 2vw;
+}
+
+.tekst2 h2{
+    align-content: center;
+    padding: 45px 0;
+    font-size: 1.5em;
+    line-height: 2vw;
+    letter-spacing: 0.5vw;
+    color: var(--moerkblae);
+}
+
+.tekst2 p{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.tekst3{
+    align-content: center;
+    padding: 45px 0;
+    font-size: 1.5em;
+    letter-spacing: 0.5vw;
+    color: var(--moerkblae);
+}
+
+.værdier{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    width: auto;
+    text-align: center;
+}
+
+.tekst4 h4{
+    align-content: center;
+    padding: 20px 0;
+    font-size: 1em;
+    letter-spacing: 0.2vw;
+    color: var(--moerkblae);
+}
+
+.tekst4 p{
+    line-height: 2vw;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/*PODCAST*/
+
+.podcast{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    background-color: var(--blae);
+    background-size: cover;
+    background-position: center;
+    
+    
+}
+.podcast img{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.podcasttext{
+    display: flex;
+    padding: 45px 0;
+    font-size: 2.5em;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 8%;
+    color: white;
+
+}
+
+#podcastknap{
+    display: flex;
+    padding: 45px 0;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 49%;
+    margin-top: 20%;
+}
+
+#podcastknap a{
+    text-decoration: none;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+/*CONNECT MED OS*/
+
+.space{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20vh;
+    background-color: var(--blae);
+}
+
+.space1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 30vh;
+    background-color: var(--blae);
+}
+
+.space1 h2{
+    display: flex;
+    font-size: 2em;
+    margin-left: 40%;
+    margin-top: 5%;
+    color: white;
+}
+
+.space1 li a{
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    margin-left: 42%;
+    margin-top: 5%;
+}
+
+/*MINDFULNESS*/
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 110vh;
+    background-image: url(images/starskybg.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    color: var(--white);
+}
+
+.item1{
+    padding: 55px 0;
+    margin-left: 9%;
+    margin-top: 5.5%;
+    line-height: 5em;
+}
+
+.item1 h2{
+    display: flex;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1.5em;
+}
+
+#audio{
+    width: 100%;
+    height: auto;
+}
+
+
+.meditation{
+    padding: 20px 0;
+    margin-left: 23%;
+    margin-right: 5%;
+}
+
+.item2 h1{
+    display: flex;
+    margin-top: 25px;
+    padding: 35px 0;
+    font-size: 3em;
+}
+
+.item2 p{
+    display: flex;
+    padding: 20px 0;
+    line-height: 1.7vw;
+
+}
+
+.item3 h3{
+    display: flex;
+    padding-bottom: 20px;
+    padding: 20px 0;
+} 
+
+.item3 p{
+   display: flex;
+   line-height: 1.7vw;
+}
+
+/*VANER OG RUTINER*/
+
+.vanerogrutiner{
+    display: flex;
+    width: 100%;
+    height: 160vh;
+    background-image: url(images/splitbg.png);
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    box-sizing: border-box;
+
+}
+
+.artikel-left{
+    padding: 25px 0;
+    margin-left: 3%;
+    margin-right: 3%;
+    line-height: 5em;
+
+}
+
+.artikel-left h1{
+    display: flex;
+    margin-top: 20px;
+    padding: 42px 0;
+    font-size: 3.5em;
+}
+
+.artikel-left h2{
+    display: flex  
+}
+
+.artikel-left p{
+    display: flex;
+    padding: 20px 0;
+    line-height: 1.7vw;
+}
+
+.godevaner{
+    display: absolute;
+    line-height: 1em;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+.godevaner h2{
+    display: flex;
+    margin-left: 49%;
+    margin-top: 8%;
+    font-size: 4em;
+    font-family: 'Amatic SC', cursive;
+}
+
+.godevaner img{
+    display: flex;
+    height: 230px;
+    border-radius: 15px;
+    margin-right: 6%;
+    padding: 10px;
+}
+
+
+.artikel-right{
+    width: 100%;
+    line-height: 1.7vw;
+    display: absolute;
+    margin: 90px;
+    margin-bottom: 20%;
+    padding: 25px;
+    flex-direction: column;
+    color: white;
+    z-index: 10;
+
+}
+
+.right1{
+    display: flex;
+}
+
+.beskrivelse{
+    padding: 7px;
+}
+
+.beskrivelse a{
+    color: var(--moerkblae);
+}
+
+
+/*UGENS ANBEFALING*/
+
+.anbefaling{
+    display: flex;
+    align-content: center;
+    text-align: center;
+    color: var(--moerkblae);
+    padding: 75px 0;
+    flex-direction: column;
+    font-size: 3.5em;
+}
+
+
+/* FOOTER */
+
+footer{
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 30px 0;
+    margin: 25px 0;
+    justify-content: space-between;
+    background-color: var(--white);
+    color: var(--blae);
+    text-align: left;
+
+}
+
+.socials-footer li{
+    list-style: none;
+}
+
+.socials-footer a{
+    color: var(--blae);
+    font-size: 25px;
+    padding: 20px;
+
+}
+
+.socials-footer{
+    display: flex;
+    gap: 20px;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.menu-footer{
+    font-size: 1em;
+    line-height: 20pt;
+    padding: 30px 0;
+    margin-right: 3vw;
+}
+
+.kontakt-footer{
+    font-size: 1em;
+    line-height: 20pt;
+    padding: 30px 0;
+    margin-right: 3vw;
+}
+
+.kontakt-footer a{
+    text-decoration: none;
+    color: var(--blae);
+    font-weight: 500;
+}
+
+.menu-footer li{
+    list-style: none;
+}
+
+footer img{
+    height: 55px;
+    width: auto;
+    padding-bottom: 10%;
+    padding-left: 5%;
+}
+
+.logo-footer{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.nav-links-footer a{
+    color: var(--blae);
+    text-decoration: none;
+}
+
+/*RESPONSIV*/
+
+@media screen and (max-width:1024px) {
+    body {
+        color: #fff;
+        font-size: 100%;
+    }
+    
+    
+}
+
+@media screen and (min-width:1025px) {
+    body {
+        color: #fff;
+        font-size: 95%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    body {
+        color: #fff;
+        font-size: 100%;
+    }
+    
+}
+
+@media screen and (min-width:701px) {
+    body {
+        color: #fff;
+        font-size: 95%;
+    }
+     
+}
+
+
+@media screen and (max-width:400px) {
+    body {
+        color: #fff;
+        font-size: 100%;
+    }
+    
+}
+
+@media screen and (min-width:401px) {
+    body {
+        color: #fff;
+        font-size: 95%;
+    }
+}
+
+
+
+/*ANIMATION*/
+
+@keyframes landingpage {
+    0%{
+        opacity: 0;
+        transform: translateY(-30px)
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes landingpage-2 {
+    0%{
+        opacity: 0;
+        transform: translateY(30px)
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes landingknap {
+    0%{
+        opacity: 0;
+        transform: translateY(30px)
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+
+
+
+
+
+
